@@ -1,0 +1,24 @@
+name: Build posts index
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'posts/**' ]  # only run when posts change
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install gray-matter  # install required package
+      - run: node generate-index.js
+      - name: Commit & push posts.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add posts.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "auto‑update posts.json"
+          git push

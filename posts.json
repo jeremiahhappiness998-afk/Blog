@@ -1,0 +1,14 @@
+[
+  {
+    "id": "first-post",
+    "title": "First Post\r",
+    "excerpt": "\r\nThis is my first post....",
+    "content": "\r\nThis is my first post."
+  },
+  {
+    "id": "second-post",
+    "title": "Second Post\r",
+    "excerpt": "\r\nThis is my second post....",
+    "content": "\r\nThis is my second post."
+  }
+]
