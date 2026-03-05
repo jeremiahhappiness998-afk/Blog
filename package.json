@@ -1,0 +1,8 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "Static blog with CMS",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
